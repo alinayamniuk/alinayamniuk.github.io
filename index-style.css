@@ -93,6 +93,7 @@ body, html {
   border-radius: 50%;
   height: 120px;
   width: 120px;
+  outline: none;
 }
 
 .info-part1 {
@@ -246,6 +247,10 @@ body, html {
 }
 
 @media only screen and (max-width: 800px) {
+  .index-content {
+    padding: 0 5%;
+  }
+
   .menubtn1, .menubtn2 {
     display: block;
   }
@@ -270,6 +275,12 @@ body, html {
   .index-content nav a {
     padding: 10px;
     margin: auto;
+  }
+  .index-content nav a .hover:after {
+    display: none;
+  }
+  .index-content nav a .hover:hover:after {
+    transform: scaleX(0);
   }
 
   .index-content .navbar {
