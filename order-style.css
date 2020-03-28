@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background-color: #F2F3EB;
+}
+
+.form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-form {
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  width: 40%;
+  border: 2px solid #474544;
+}
+.container-form .another {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-form .near {
+  display: flex;
+  flex-direction: row;
+}
+.container-form .another input {
+  color: #474544;
+  border: none;
+  border-bottom: 2px solid #474544;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  background: none;
+  width: 313px;
+  padding: 10px;
+  margin: 5px;
+}
+.container-form .near input {
+  color: #474544;
+  border: none;
+  border-bottom: 2px solid #474544;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  background: none;
+  padding: 10px;
+  margin: 5px;
+  width: 150px;
+}
+.container-form input[type=submit] {
+  cursor: pointer;
+  color: #474544;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  background: none;
+  padding: 10px;
+  margin: 25px 5px;
+  width: 150px;
+  border: 2px solid #474544;
+  transition: 0.3s;
+}
+.container-form input[type=submit]:hover {
+  color: #F2F3EB;
+  background-color: #474544;
+}
+.container-form .order {
+  margin-top: -5%;
+  margin-bottom: 10%;
+  text-align: center;
+}
+.container-form .order h1 {
+  letter-spacing: 7px;
+  color: #474544;
+  text-transform: uppercase;
+}
+.container-form .order i {
+  color: #474544;
+  font-size: 25px;
+  margin: 5px 15px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+::placeholder {
+  color: #474544;
+}
+
+@media only screen and (max-width: 800px) {
+  .container-form {
+    border: none;
+  }
+}
+
+/*# sourceMappingURL=order-style.css.map */
