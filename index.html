@@ -89,6 +89,7 @@
 </body>
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 <script>
     $(function() {
         var header = $(".info-part1");
@@ -96,21 +97,40 @@
         var header2 = $(".info-part3");
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
-
-            if (scroll >= 250) {
-                header.removeClass('header').addClass("info-part1-alt");
-            } else if (scroll <= 250){
-                header.removeClass("info-part1-alt").addClass('header');
+            var x = window.matchMedia("(min-width: 800px)")
+            if (x.matches){
+                if (scroll >= 250) {
+                    header.removeClass('header').addClass("info-part1-alt");
+                } else if (scroll <= 250){
+                    header.removeClass("info-part1-alt").addClass('header');
+                }
+                if (scroll >= 800) {
+                    header1.removeClass('header1').addClass("info-part2-alt");
+                }else if (scroll <= 800){
+                    header1.removeClass("info-part2-alt").addClass('header1');
+                }
+                if (scroll >= 1050){
+                    header2.removeClass('header2').addClass("info-part3-alt");
+                }else if (scroll <= 1050){
+                    header2.removeClass("info-part3-alt").addClass('header2');
+                }
             }
-            if (scroll >= 800) {
-                header1.removeClass('header1').addClass("info-part2-alt");
-            }else if (scroll <= 800){
-                header1.removeClass("info-part2-alt").addClass('header1');
-            }
-            if (scroll >= 1050){
-                header2.removeClass('header2').addClass("info-part3-alt");
-            }else if (scroll <= 1050){
-                header2.removeClass("info-part3-alt").addClass('header2');
+            else {
+                if (scroll >= 150) {
+                    header.removeClass('header').addClass("info-part1-alt");
+                } else if (scroll <= 250){
+                    header.removeClass("info-part1-alt").addClass('header');
+                }
+                if (scroll >= 800) {
+                    header1.removeClass('header1').addClass("info-part2-alt");
+                }else if (scroll <= 800){
+                    header1.removeClass("info-part2-alt").addClass('header1');
+                }
+                if (scroll >= 1050){
+                    header2.removeClass('header2').addClass("info-part3-alt");
+                }else if (scroll <= 1050){
+                    header2.removeClass("info-part3-alt").addClass('header2');
+                }
             }
         });
     });
