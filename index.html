@@ -97,9 +97,9 @@
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
 
-            if (scroll >= 450) {
+            if (scroll >= 250) {
                 header.removeClass('header').addClass("info-part1-alt");
-            } else if (scroll <= 450){
+            } else if (scroll <= 250){
                 header.removeClass("info-part1-alt").addClass('header');
             }
             if (scroll >= 800) {
